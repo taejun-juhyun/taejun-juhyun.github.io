@@ -1,0 +1,66 @@
+.basic-container {
+	position: relative;
+	min-height: 1px;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+
+.calendar {
+	font-family: '맑은 고딕';
+	font-size: 1.3em;
+	text-align: center;
+}
+
+.subtitle {
+	padding-left: 10px;
+	font-size: 1.8em;
+	font-weight: bold;
+	text-align: left;
+}
+
+.d-day {
+	background-color: #fcc;
+	color: #f33;
+}
+
+.info {
+	margin-top: 25px;
+	margin-bottom: 25px;
+	font-weight: bold;
+}
+
+.info>div {
+	text-align: center;
+	font-size: 14px;
+}
+
+.info .greeting-text1 {
+	color: #008744;
+	font-family: 'Varela Round';
+	font-size: 20px;
+}
+
+.info .greeting-text2 {
+	color: #008744;
+	font-family: 'Varela Round';
+	font-size: 35px;
+	font-weight: bold;
+}
+
+.info .date {
+	color: #008744;
+	font-family: 'Varela Round';
+	font-size: 20px;
+}
+
+.info .location {
+	color: #6D6E70;
+	margin-top: 5px;
+}
+
+.edit div {
+	padding: 5px;
+}
