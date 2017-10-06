@@ -944,11 +944,8 @@ img {
   height: auto;
   margin: auto;
 }
-.img-responsive-80,
-.thumbnail > img,
-.thumbnail a > img,
-.carousel-inner > .item > img,
-.carousel-inner > .item > a > img {
+.img-responsive-80
+{
   display: block;
   max-width: 80%;
   height: auto;
@@ -2088,8 +2085,8 @@ th {
 .table > thead > tr > td,
 .table > tbody > tr > td,
 .table > tfoot > tr > td {
-  padding: 8px;
-  line-height: 1.42857143;
+  padding: 6px;
+  line-height: 1.3;
   vertical-align: top;
   border-top: 1px solid #ddd;
 }
