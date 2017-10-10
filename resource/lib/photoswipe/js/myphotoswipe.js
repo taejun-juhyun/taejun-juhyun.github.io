@@ -137,7 +137,6 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
         items = parseThumbnailElements(galleryElement);
 
         // define options (if needed)
-
         options = {
 
             // define gallery index (for URL)
@@ -203,4 +202,4 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
 };
 
 // execute above function
-initPhotoSwipeFromDOM('.skin_gallery');
+initPhotoSwipeFromDOM('.my-gallery');

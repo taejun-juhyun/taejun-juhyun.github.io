@@ -3,104 +3,114 @@
 <html>
 
 <head>
-	<meta charset='utf-8'>
-	<meta name='viewport'
-		content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no'>
+	<meta charset="utf-8">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
 	
 	<title>박태준 ♥ 박주현</title>
 	
-	<link rel='stylesheet'
-		href='resource/lib/bootstrap/css/bootstrap.css'>
-	<link rel='stylesheet' href='resource/card.css'>
+	<link rel="stylesheet"
+		href="resource/lib/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="resource/card.css">
 
-	<script src='resource/lib/jquery/jquery.js'></script>
+	<script src="resource/lib/jquery/jquery.js"></script>
+	<script src="resource/card.js"></script>
+	<script src="resource/lib/firebase/firebase.js"></script>
+
+	<link rel="stylesheet" href="resource/lib/photoswipe/css/photoswipe.css">
+	<link rel="stylesheet prefetch" href="resource/lib/photoswipe/css/photoswipe.min.css">	
+	<link rel="stylesheet prefetch" href="resource/lib/photoswipe/css/default-skin.min.css">
+	
+<!-- <link rel='stylesheet prefetch' -->
+<!-- 	href='https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css'>		 -->
+	
 </head>
 
 <body>
-	<div class='container'>
+	<div class="container">
 
-		<div class='img-container'>
-			<img class='img-responsive' src='resource/images/weddingInvitation4.png'>
-			<img class='img-responsive' src='resource/images/main2_purple.png'>
+		<div class="img-container">
+			<img class="img-responsive" src="resource/images/weddingInvitation4.png">
+			<img class="img-responsive" src="resource/images/main2_purple.png">
 		</div>
 		
-<!-- 		<div class='info'> -->
-<!-- 			<div class='greeting-text1'>2018년 3월 4일</div> -->
-<!-- 			<div class='greeting-text1'>박태준, 박주현</div> -->
-<!-- 			<div class='greeting-text2'>결혼합니다!!</div> -->
+<!-- 		<div class="info"> -->
+<!-- 			<div class="greeting-text1">2018년 3월 4일</div> -->
+<!-- 			<div class="greeting-text1">박태준, 박주현</div> -->
+<!-- 			<div class="greeting-text2">결혼합니다!!</div> -->
 <!-- 		</div> -->
 		
-		<div class='basic-container'>
-			<div class='calendar'>
-				<div class='month-subtitle'>2018년 3월</div>
-				<div>
-					<table class='table day'>
-						<tr>
-							<td>일</td>
-							<td>월</td>
-							<td>화</td>
-							<td>수</td>
-							<td>목</td>
-							<td>금</td>
-							<td>토</td>
-						</tr>
-						<tr>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td>1</td>
-							<td>2</td>
-							<td>3</td>
-						</tr>
-						<tr>
-							<td  class='d-day'>4</td>
-							<td>5</td>
-							<td>6</td>
-							<td>7</td>
-							<td>8</td>
-							<td>9</td>
-							<td>10</td>
-						</tr>
-						<tr>
-							<td>11</td>
-							<td>12</td>
-							<td>13</td>
-							<td>14</td>
-							<td>15</td>
-							<td>16</td>
-							<td>17</td>
-						</tr>
-						<tr>
-							<td>18</td>
-							<td>19</td>
-							<td>20</td>
-							<td>21</td>
-							<td>22</td>
-							<td>23</td>
-							<td>24</td>
-						</tr>
-						<tr>
-							<td>25</td>
-							<td>26</td>
-							<td>27</td>
-							<td>28</td>
-							<td>29</td>
-							<td>30</td>
-							<td>31</td>
-						</tr>
-					</table>
-				</div>
-			</div>
-		</div>
+<!-- 		<div class="basic-container"> -->
+<!-- 			<div class="calendar"> -->
+<!-- 				<div class="month-subtitle">2018년 3월</div> -->
+<!-- 				<div> -->
+<!-- 					<table class="table day"> -->
+<!-- 						<tr> -->
+<!-- 							<td>일</td> -->
+<!-- 							<td>월</td> -->
+<!-- 							<td>화</td> -->
+<!-- 							<td>수</td> -->
+<!-- 							<td>목</td> -->
+<!-- 							<td>금</td> -->
+<!-- 							<td>토</td> -->
+<!-- 						</tr> -->
+<!-- 						<tr> -->
+<!-- 							<td></td> -->
+<!-- 							<td></td> -->
+<!-- 							<td></td> -->
+<!-- 							<td></td> -->
+<!-- 							<td>1</td> -->
+<!-- 							<td>2</td> -->
+<!-- 							<td>3</td> -->
+<!-- 						</tr> -->
+<!-- 						<tr> -->
+<!-- 							<td  class="d-day">4</td> -->
+<!-- 							<td>5</td> -->
+<!-- 							<td>6</td> -->
+<!-- 							<td>7</td> -->
+<!-- 							<td>8</td> -->
+<!-- 							<td>9</td> -->
+<!-- 							<td>10</td> -->
+<!-- 						</tr> -->
+<!-- 						<tr> -->
+<!-- 							<td>11</td> -->
+<!-- 							<td>12</td> -->
+<!-- 							<td>13</td> -->
+<!-- 							<td>14</td> -->
+<!-- 							<td>15</td> -->
+<!-- 							<td>16</td> -->
+<!-- 							<td>17</td> -->
+<!-- 						</tr> -->
+<!-- 						<tr> -->
+<!-- 							<td>18</td> -->
+<!-- 							<td>19</td> -->
+<!-- 							<td>20</td> -->
+<!-- 							<td>21</td> -->
+<!-- 							<td>22</td> -->
+<!-- 							<td>23</td> -->
+<!-- 							<td>24</td> -->
+<!-- 						</tr> -->
+<!-- 						<tr> -->
+<!-- 							<td>25</td> -->
+<!-- 							<td>26</td> -->
+<!-- 							<td>27</td> -->
+<!-- 							<td>28</td> -->
+<!-- 							<td>29</td> -->
+<!-- 							<td>30</td> -->
+<!-- 							<td>31</td> -->
+<!-- 						</tr> -->
+<!-- 					</table> -->
+<!-- 				</div> -->
+<!-- 			</div> -->
+<!-- 		</div> -->
 
-		<div class='info'>
-			<div class='date'>2018.03.04.(일) 13:00</div>
-			<div class='location'>밀레니엄 서울 힐튼 그랜드 볼룸</div>
+		<div class="info">
+			<div class="date">2018.03.04.(일) 13:00</div>
+			<div class="location">밀레니엄 서울 힐튼 그랜드 볼룸</div>
 		</div>
 		
-		<div class='info'>
-			<div class='greeting-text'>
+		<div class="info">
+			<div class="greeting-text">
 				여기 두 사람 소중한 순간들을 사랑으로 엮어
 				<br>이제 여러 어른과 친지 앞에서 
 				<br>혼인의 예를 갖추려 합니다.
@@ -109,96 +119,193 @@
 			</div>
 		</div>
 		
-		<div class='info'>
-            <dl class="husband">
-                <dt><span class="blue">신랑</span> <span class="input_husband">박태준</span></dt>
-                <dd><a href="tel:"><img src="resource/images/icon_tel_husband.png" width="49"></a></dd>
-                <dd><a href="sms:"><img src="resource/images/btn_sms_husband.png" width="49"></a></dd>
+		<div class="info">
+            <dl class="groom">
+                <dt>신랑  박태준</dt>
+                <dd><a href="tel:"><img src="resource/images/icon_tel_groom.png" width="49"></a></dd>
+                <dd><a href="sms:"><img src="resource/images/btn_sms_groom.png" width="49"></a></dd>
             </dl>
             <dl><img src="resource/images/icon_n.png" width="16"></dl>
-            <dl class="wife">
-                <dt><span class="pink">신부</span> <span class="input_wife">박주현</span></dt>
-                <dd><a href="tel:"><img src="resource/images/icon_tel_wife.png" width="49"></a></dd>
-                <dd><a href="sms:"><img src="resource/images/btn_sms_wife.png" width="49"></a></dd>
+            <dl class="bride">
+                <dt>신부  박주현</dt>
+                <dd><a href="tel:"><img src="resource/images/icon_tel_bride.png" width="49"></a></dd>
+                <dd><a href="sms:"><img src="resource/images/btn_sms_bride.png" width="49"></a></dd>
             </dl>
 		</div>
 
-		<div class="parent_contect input_blue_p_focus input_blue_m_focus input_pink_p_focus input_pink_m_focus input_blue_p_n_focus input_blue_m_n_focus input_pink_p_n_focus input_pink_m_n_focus select_input1_focus select_input2_focus select_input3_focus select_input4_focus">
-		    <p class="btn_toggle"><a href="http://mcard.barunnfamily.com/SS2505262?523d#url"></a></p>
-		    <ul>
-		        <li class="husband">
-		            <strong><span>신랑측 혼주</span></strong>
-		            <ul class="toggle btn_contact_off">
-		                <li>
-		                    <span class="blue input_blue_p select_input1">아버지</span> <span class="input_blue_p_n">박원일</span>
-		                    <ul class="btn_contact" style="display:none;">
-		                        <li><a href="tel:"><img src="resource/images/icon_tel_husband.png" width="35"></a></li>
-		                        <li><a href="sms:"><img src="resource/images/btn_sms_husband2.png" width="35"></a></li>
-		                    </ul>
-		                </li>
-		                <li>
-		                    <span class="blue input_blue_m select_input2">어머니</span> <span class="input_blue_m_n">최명숙</span>
-		                    <ul class="btn_contact" style="display:none;">
-		                        <li><a href="tel:"><img src="resource/images/icon_tel_husband.png" width="35"></a></li>
-		                        <li><a href="sms:"><img src="resource/images/btn_sms_husband2.png" width="35"></a></li>
-		                    </ul>
-		                </li>
-		            </ul>
-		        </li>
-		        <li class="wife">
-		            <strong><span class="dot_line">신부측 혼주</span></strong>
-		            <ul class="dot_line toggle btn_contact_off">
-		                <li>
-		                    <span class="pink input_pink_p select_input3">아버지</span> <span class="input_pink_p_n">박철오</span>
-		                    <ul class="btn_contact" style="display:none;">
-		                        <li><a href="tel:"><img src="resource/images/icon_tel_wife.png" width="35"></a></li>
-		                        <li><a href="sms:"><img src="resource/images/btn_sms_wife2.png" width="35"></a></li>
-		                    </ul>
-		                </li>
-		                <li>
-		                    <span class="pink input_pink_m select_input4">어머니</span> <span class="input_pink_m_n">이영애</span>
-		                    <ul class="btn_contact" style="display:none;">
-		                        <li><a href="tel:"><img src="resource/images/icon_tel_wife.png" width="35"></a></li>
-		                        <li><a href="sms:"><img src="resource/images/btn_sms_wife2.png" width="35"></a></li>
-		                    </ul>
-		                </li>
-		            </ul>
-		        </li>
-		    </ul>
+		<div class="basic-container">
+			<div class="parent">
+			    <ul>
+			        <li class="groom">
+			            <span class="groom-parent">신랑측 혼주</span>
+			            <ul>
+			                <li>
+								<span class="groom-father-title">아버지</span> 
+								<span class="groom-father">박원일</span>
+			                </li>
+			                <li>
+			                    <span class="groom-mother-title">어머니</span>
+			                    <span class="groom-mother">최명숙</span>
+			                </li>
+			            </ul>
+			        </li>
+			        <li class="bride">
+						<span class="bride-parent">신부측 혼주</span>
+			            <ul>
+			                <li>
+								<span class="bride-father-title">아버지</span> 
+								<span class="bride-father">박철오</span>
+			                </li>
+			                <li>
+			                    <span class="bride-mother-title">어머니</span>
+			                    <span class="bride-mother">이영애</span>
+			                </li>
+			            </ul>
+			        </li>
+			    </ul>
+			</div>
+		</div>
+		
+		<br/><br/><br/>
+		
+		<div class="basic-container">
+			<div class="subtitle">Gallary</div>
+			<div class="my-gallery">
+				<figure itemprop="associatedMedia">
+					<a href="resource/images/together3.JPG"
+						itemprop="contentUrl" data-size="1280x960"> <img
+						src="resource/images/together3.JPG"
+						itemprop="thumbnail" alt="Image description" />
+					</a>
+				</figure>
+		
+				<figure itemprop="associatedMedia" itemscope
+					itemtype="http://schema.org/ImageObject">
+					<a href="resource/images/together2.JPG"
+						itemprop="contentUrl" data-size="540x960"> <img
+						src="resource/images/together2.JPG"
+						itemprop="thumbnail" alt="Image description" />
+					</a>
+				</figure>
+				
+				<figure itemprop="associatedMedia" itemscope
+					itemtype="http://schema.org/ImageObject">
+					<a href="resource/images/together6.JPG"
+						itemprop="contentUrl" data-size="720x960"> <img
+						src="resource/images/together6.JPG"
+						itemprop="thumbnail" alt="Image description" />
+					</a>
+				</figure>				
+		
+			</div>
 		</div>
 
-		<div class='basic-container'>
-			<div class='subtitle'>찾아오시는 길</div>
-			<img class='img-responsive' src='resource/images/map1.png'>
-			<a href='http://blog.naver.com/PostView.nhn?blogId=sinhyeya&logNo=221047468739&parentCategoryNo=&categoryNo=13&viewDate=&isShowPopularPosts=true&from=search'>도보 이동시 참고</a>
+		<!-- Root element of PhotoSwipe. Must have class pswp. -->
+		<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+	
+			<!-- Background of PhotoSwipe. 
+	         It's a separate element, as animating opacity is faster than rgba(). -->
+			<div class="pswp__bg"></div>
+	
+			<!-- Slides wrapper with overflow:hidden. -->
+			<div class="pswp__scroll-wrap">
+	
+				<!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+				<!-- don't modify these 3 pswp__item elements, data is added later on. -->
+				<div class="pswp__container">
+					<div class="pswp__item"></div>
+					<div class="pswp__item"></div>
+					<div class="pswp__item"></div>
+				</div>
+	
+				<!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+				<div class="pswp__ui pswp__ui--hidden">
+	
+					<div class="pswp__top-bar">
+	
+						<!--  Controls are self-explanatory. Order can be changed. -->
+	
+						<div class="pswp__counter"></div>
+	
+						<button class="pswp__button pswp__button--close"
+							title="Close (Esc)"></button>
+	
+						<button class="pswp__button pswp__button--share" title="Share"></button>
+	
+						<button class="pswp__button pswp__button--fs"
+							title="Toggle fullscreen"></button>
+	
+						<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+	
+						<!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+						<!-- element will get class pswp__preloader--active when preloader is running -->
+						<div class="pswp__preloader">
+							<div class="pswp__preloader__icn">
+								<div class="pswp__preloader__cut">
+									<div class="pswp__preloader__donut"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+	
+					<div
+						class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+						<div class="pswp__share-tooltip"></div>
+					</div>
+	
+					<button class="pswp__button pswp__button--arrow--left"
+						title="Previous (arrow left)"></button>
+	
+					<button class="pswp__button pswp__button--arrow--right"
+						title="Next (arrow right)"></button>
+	
+					<div class="pswp__caption">
+						<div class="pswp__caption__center"></div>
+					</div>
+	
+				</div>
+	
+			</div>
+	
+		<script src="resource/lib/photoswipe/js/photoswipe.min.js"></script>
+		<script src="resource/lib/photoswipe/js/photoswipe-ui-default.min.js"></script>
+		<script src="resource/lib/photoswipe/js/myphotoswipe.js"></script>
 		</div>
 
-		<div class='basic-container'>
-			<div class='subtitle'>축하글 남기기</div>
+		<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+		
+		<div class="basic-container">
+			<div class="subtitle">찾아오시는 길</div>
+			<img class="img-responsive" src="resource/images/map1.png"></img>
+			<br/>
+			<a class="" href="http://blog.naver.com/PostView.nhn?blogId=sinhyeya&logNo=221047468739&parentCategoryNo=&categoryNo=13&viewDate=&isShowPopularPosts=true&from=search">도보 이동시 참고</a>
+		</div>
 
-<!-- 				<table class='table'> -->
-<!-- 					<thead> -->
-<!-- 						<tr> -->
-<!-- 							<td class='edit'> -->
-<!-- 								<div class='input-group'> -->
-<!-- 									<span class='input-group-addon'>이름</span> <input type='text' -->
-<!-- 										id='name' placeholder='name' class='form-control'> -->
-<!-- 								</div> -->
-<!-- 								<div class='input-group'> -->
-<!-- 									<span class='input-group-addon'>댓글</span> <input type='text' -->
-<!-- 										id='message' placeholder='message' class='form-control'> -->
-<!-- 								</div> -->
-<!-- 								<div class='input-group btn-block'> -->
-<!-- 									<button type='button' id='btnReplay' -->
-<!-- 										class='btn btn-success btn-block'>글쓰기</button> -->
-<!-- 								</div> -->
-<!-- 							</td> -->
-<!-- 						</tr> -->
-<!-- 					</thead> -->
-<!-- 					<tbody id='view'> -->
+		<div class="basic-container">
+			<div class="subtitle">축하글 남기기</div>
+				<table class="table">
+					<thead>
+						<tr>
+							<td class="edit">
+								<div class="input-group">
+									<span class="input-group-addon">이름</span> <input type="text"
+										id="name" placeholder="name" class="form-control">
+								</div>
+								<div class="input-group">
+									<span class="input-group-addon">댓글</span> <input type="text"
+										id="message" placeholder="message" class="form-control">
+								</div>
+								<div class="input-group btn-block">
+									<button type="button" id="btnReplay"
+										class="btn btn-success btn-block">글쓰기</button>
+								</div>
+							</td>
+						</tr>
+					</thead>
+					<tbody id="view">
 
-<!-- 					</tbody> -->
-<!-- 				</table> -->
+					</tbody>
+				</table>
 		</div>
 	</div>
 </body>

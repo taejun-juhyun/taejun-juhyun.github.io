@@ -3,14 +3,14 @@
   float: left;
 }
 .my-gallery img {
-  width: 100%;
-  height: auto;
+  height: 100%;
+  width: auto;
 }
 .my-gallery figure {
   display: block;
   float: left;
-  margin: 0 5px 5px 0;
-  width: 150px;
+  margin: 0 10px 10px 0;
+  height: 200px;
 }
 .my-gallery figcaption {
   display: none;
